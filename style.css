@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: hsl(207, 91%, 79%);
- }
+    --laranja-claro: hsl(194, 85%, 79%);
+    --alto-contraste-fundo: #31abc0;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: hsl(187, 82%, 28%);
+}
 
 body {
     font-size: 1rem;
@@ -21,7 +24,7 @@ section {
 
 
 .nav-link {
-    color: hsl(187, 57%, 53%);
+    color: hsl(177, 100%, 76%);
     font-weight: 600;
 }
 
@@ -123,19 +126,19 @@ h2 {
     /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
     /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px #42c9d379;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
 .formulario button {
-    background-color: hsl(197, 89%, 72%);
+    background-color: hsl(180, 93%, 39%);
     border: none;
     font-weight: bold;
 }
 
 .form-control {
-    background-color: hsl(212, 71%, 70%);
+    background-color: #F1EDEF;
 }
 .menu-acessibilidade{
     position: fixed;
@@ -143,6 +146,7 @@ h2 {
     right:20px;
     z-index: 1000;
 }
+
 .rotacao-botao{
     transform: rotate(-90deg);
     transform-origin: right center;
@@ -159,4 +163,38 @@ h2 {
 }
 .apresenta-lista{
     display: none;
+}
+
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+.alto-contraste .fundo-galeria {
+    background: none;
 }
